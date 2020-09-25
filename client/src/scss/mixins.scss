@@ -1,0 +1,11 @@
+@mixin flex-container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+@mixin auth-form {
+  width: 100%;
+  max-width: 300px;
+  min-width: 200px;
+}

@@ -1,0 +1,48 @@
+@import "./scss/variables.scss";
+@import "./scss/mixins.scss";
+
+.ui.container.app {
+  @include flex-container;
+}
+
+.ui.form.auth {
+  @include auth-form;
+}
+
+.ui.large.header.loading,
+.ui.large.header.error,
+.ui.large.header.auth,
+.ui.list .item .header.question {
+  margin: $big-margin;
+}
+
+.ui.list .list.answers {
+  padding: 0px;
+}
+
+.ui.button.selected,
+.ui.button.selected:focus {
+  color: $white;
+  background-color: lighten($blue, 25);
+}
+
+.ui.fluid.button.submit:hover {
+  color: $white;
+  background-color: lighten($blue, 5);
+}
+
+.ui.button.submit,
+.ui.button.submit:focus,
+.ui.fluid.button.submit:active {
+  color: $white;
+  margin: $small-margin;
+  background-color: $blue;
+}
+
+.ui.success.message.result {
+  margin: $small-margin;
+}
+
+.ui.form .ui.input input:focus {
+  border-color: lighten($blue, 5);
+}
