@@ -61,7 +61,7 @@ export default function Auth({ history }) {
         test-class="email"
         placeholder="Email"
         onChange={handleChange}
-        error={errors.response && errors.response.data.error.email}
+        error={errors.response && errors.response.data.error.message.email}
       />
       <Form.Input
         fluid
@@ -70,7 +70,7 @@ export default function Auth({ history }) {
         test-class="password"
         placeholder="Password"
         onChange={handleChange}
-        error={errors.response && errors.response.data.error.password}
+        error={errors.response && errors.response.data.error.message.password}
       />
       {action === "register" && (
         <Form.Input
@@ -80,7 +80,7 @@ export default function Auth({ history }) {
           test-class="confirm-password"
           placeholder="Confirm Password"
           onChange={handleChange}
-          error={errors.response && errors.response.data.error.password}
+          error={errors.response && errors.response.data.error.message.password}
         />
       )}
       <Button fluid className="submit" test-class="auth-button">

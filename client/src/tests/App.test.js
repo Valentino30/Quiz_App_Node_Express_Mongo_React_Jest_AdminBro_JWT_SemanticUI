@@ -39,7 +39,6 @@ describe("App Component", () => {
   });
 
   it("Should render a login route without errors", () => {
-    console.log(component.debug());
     const wrapper = component.find("[test-class='login-route']");
     expect(wrapper.length).toBe(1);
   });

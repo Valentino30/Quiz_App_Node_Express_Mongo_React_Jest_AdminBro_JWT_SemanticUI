@@ -23,13 +23,8 @@ export default function Quiz() {
     setLoading(false);
   }, []);
 
-  // Autoscroll to the bottom of the page to show the result message
-  useEffect(() => {
-    window.scrollTo(0, document.body.scrollHeight);
-  }, [result]);
-
   const handleClick = (event, question, answer) => {
-    // Prevent adding an answer to a question twice
+    // Prevent answering a question twice
     const filteredAnswers = answers.filter(
       (answer) => answer.questionId !== question._id
     );

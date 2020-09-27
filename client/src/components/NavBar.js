@@ -7,20 +7,16 @@ import { AuthContext } from "../context/auth";
 export default function NavBar() {
   const { user, logout } = useContext(AuthContext);
 
-  const [activeMenuItem, setActiveMenuItem] = useState("login");
+  const [activeMenuItem, setActiveMenuItem] = useState(
+    window.location.pathname.substr(1)
+  );
 
   const handleMenuItemClick = (_, { name }) => {
     setActiveMenuItem(name);
   };
 
   return (
-    <Menu
-      pointing
-      secondary
-      color="blue"
-      size="massive"
-      test-class="navbar"
-    >
+    <Menu pointing secondary color="blue" size="massive" test-class="navbar">
       <Menu.Item
         as={Link}
         to="/"

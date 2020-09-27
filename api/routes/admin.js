@@ -11,15 +11,23 @@ const adminBro = new AdminBro({
 });
 
 const admin = {
-  email: process.env.ADMIN_EMAIL,
-  password: process.env.ADMIN_PASSWORD,
+  email: process.env.ADMIN_EMAIL || "admin@gmail.com",
+  password: process.env.ADMIN_PASSWORD || "admin-bro",
 };
 
-const router = AdminBroExpress.buildAuthenticatedRouter(adminBro, {
-  cookieName: process.env.ADMIN_COOKIE_NAME || "admin-bro",
-  cookiePassword: process.env.ADMIN_COOKIE_PASSWORD || "admin-bro",
-  authenticate: async (email, password) =>
-    email === admin.email && password === admin.password ? admin : null,
-});
+const router = AdminBroExpress.buildAuthenticatedRouter(
+  adminBro,
+  {
+    cookieName: process.env.ADMIN_COOKIE_NAME || "admin-bro",
+    cookiePassword: process.env.ADMIN_COOKIE_PASSWORD || "admin-bro",
+    authenticate: async (email, password) =>
+      email === admin.email && password === admin.password ? admin : null,
+  },
+  null,
+  {
+    resave: false,
+    saveUninitialized: true,
+  }
+  );
 
 module.exports = router;
