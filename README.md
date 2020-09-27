@@ -5,7 +5,8 @@ This app is built with **Node**, **Express**, **Mongo** and **React**, using **R
 Here is how to run the application:
 
 - Run the command **yarn** in the root folder to install the backend dependencies 
-- Run the command **cd client/ && yarn** to install the frontend  dependencies 
+- Run the command **cd client/ && yarn** to install the frontend  dependencies
+- Add the needed **environment variables** lister in the .env.example file
 - Run the command **yarn start** in the root folder to concurrently start both the backend and the frontend
 - Run the command **cd client/ && yarn test** to launch the frontend test suite
 
