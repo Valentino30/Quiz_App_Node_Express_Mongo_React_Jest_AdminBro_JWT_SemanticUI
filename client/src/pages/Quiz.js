@@ -82,7 +82,7 @@ export default function Quiz() {
               test-class="submit-button"
               disabled={answers.length !== questions.length}
             >
-              Summit
+              Submit
             </Button>
             {result && (
               <Message

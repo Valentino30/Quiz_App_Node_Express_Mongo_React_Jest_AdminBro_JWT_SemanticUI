@@ -5,3 +5,7 @@ node_modules/
 .env
 yarn.lock
 yarn-error.log
+
+#local
+.DS_Store
+api/.DS_Store
